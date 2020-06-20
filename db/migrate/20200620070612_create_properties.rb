@@ -6,6 +6,7 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.string :address
       t.integer :age
       t.text :note
+
       t.timestamps
     end
   end

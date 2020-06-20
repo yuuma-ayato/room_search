@@ -14,6 +14,11 @@ class PropertiesTest < ApplicationSystemTestCase
     visit properties_url
     click_on "New Property"
 
+    fill_in "Address", with: @property.address
+    fill_in "Age", with: @property.age
+    fill_in "Note", with: @property.note
+    fill_in "Property name", with: @property.property_name
+    fill_in "Rent", with: @property.rent
     click_on "Create Property"
 
     assert_text "Property was successfully created"
@@ -24,6 +29,11 @@ class PropertiesTest < ApplicationSystemTestCase
     visit properties_url
     click_on "Edit", match: :first
 
+    fill_in "Address", with: @property.address
+    fill_in "Age", with: @property.age
+    fill_in "Note", with: @property.note
+    fill_in "Property name", with: @property.property_name
+    fill_in "Rent", with: @property.rent
     click_on "Update Property"
 
     assert_text "Property was successfully updated"
